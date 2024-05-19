@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "6f43ae2e-fc30-4536-af3a-5ca94754cb3b",
+		"name": "go-dating-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7035335"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dsa@dsa.co\",\r\n    \"password\": \"123456\",\r\n    \"fullname\": \"dsa\",\r\n    \"age\": \"25\",\r\n    \"gender\": \"female\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"abc@abc.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/swipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0BhYmMuY29tIiwiZXhwIjoxNzE2MzcwNDEyLCJ1c2VyX2lkIjoiY2E1OTdhZDktOGFiYS00OWNlLThhMWEtNGI0MWNjZjkxNTU0In0.mo458v2S7DgYnZp2M2Vtlwom0E8ikozxgeImLFdBNLY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"targetId\": \"5df88475-2e44-4bc8-8c90-a2706aea42c9\",\r\n    \"isLike\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/swipe",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"swipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/purchase/premium",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0BhYmMuY29tIiwiZXhwIjoxNzE2MzcwNDEyLCJ1c2VyX2lkIjoiY2E1OTdhZDktOGFiYS00OWNlLThhMWEtNGI0MWNjZjkxNTU0In0.mo458v2S7DgYnZp2M2Vtlwom0E8ikozxgeImLFdBNLY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"premiumType\": \"no_swipe_limit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/purchase/premium",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"purchase",
+						"premium"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
